@@ -11,5 +11,6 @@ public class MainProgram {
     public static void main(String[] args) {
         Logistikzentrum lz = new Logistikzentrum("Käthes Hin-und-Her-Logistik");
         lz.verarbeiteWarteschlange();
+        //Hallo
     }
 }

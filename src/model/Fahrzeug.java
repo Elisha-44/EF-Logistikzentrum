@@ -5,11 +5,13 @@ public class Fahrzeug {
     private String bezeichnung;
     private boolean kuehl;
     private boolean sicher;
+    private Frachtgut frachtgut;
 
     public Fahrzeug(String bez, boolean kuehl, boolean sicher){
         this.bezeichnung = bez;
         this.kuehl = kuehl;
         this.sicher = sicher;
+        this.frachtgut = null;
     }
 
     public boolean kannKuehlen(){
@@ -21,14 +23,15 @@ public class Fahrzeug {
     }
 
     public Frachtgut gibFrachtgut(){
-
+        return this.frachtgut;
     }
 
-    //public void setzeFrachgut(Frachtgut gut){
-       // if(gut == 0){
+    public void setzeFrachgut(Frachtgut gut){
+       if(gut != null){
+           this.frachtgut=gut;
 
-       // }
-   // }
+       }
+    }
 
     /**
      * Es wird ein neuer String erstellt.

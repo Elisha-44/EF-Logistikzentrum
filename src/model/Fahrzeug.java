@@ -12,6 +12,24 @@ public class Fahrzeug {
         this.sicher = sicher;
     }
 
+    public boolean kannKuehlen(){
+        return this.kuehl;
+    }
+
+    public boolean istSicher(){
+        return this.sicher;
+    }
+
+    public Frachtgut gibFrachtgut(){
+
+    }
+
+    //public void setzeFrachgut(Frachtgut gut){
+       // if(gut == 0){
+
+       // }
+   // }
+
     /**
      * Es wird ein neuer String erstellt.
      * Dieser enthält die Bezeichnung des Fahrzeug-Objekts und teilt mit,

@@ -16,10 +16,6 @@ public class Frachtgut {
         return false;
     }
 
-    /**
-     * Es wird die Bezeichnung zurückgegeben.
-     * @return Bezeichnung des Frachtgut
-     */
     public String gibInfo(){
         return this.bezeichnung;
     }

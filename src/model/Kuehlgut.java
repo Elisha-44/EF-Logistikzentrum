@@ -7,30 +7,40 @@ public class Kuehlgut extends Frachtgut{
     private boolean tempNichtEingehalten;
 
     public Kuehlgut(String bez, double aktT, double minT, double maxT){
-        super(Logistikzentrum(bez));
-        //
+        super(bez);
         aktuelleTemp = aktT;
         minimalTemp = minT;
         maximalTemp = maxT;
         tempNichtEingehalten = false;
     }
 
-    public boolean kannKuehlen(){
+    public double gibAktuelleTemperatur(){
         return aktuelleTemp;
     }
 
-    public boolean gibMinimalTemp(){
+    public double gibMinimalTemp(){
         return minimalTemp;
-        //
     }
 
-    public boolean gibMaximalTemp(){
+    public double gibMaximaleTemp(){
         return maximalTemp;
     }
 
     public void pruefeTemp(){
         if(aktuelleTemp >= maximalTemp && aktuelleTemp <= minimalTemp){
-
+            tempNichtEingehalten = true;
         }
+    }
+
+    public boolean gibObTempEingehaltenWurde(){
+        return tempNichtEingehalten;
+    }
+
+    public boolean istKuehlgut(){
+        return true;
+    }
+
+    public String gibInfo(){
+        return "Es handelt sich um ein Kuehlgut mit der Bezeichnung " + bezeichnung;
     }
 }
